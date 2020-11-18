@@ -2,7 +2,6 @@ body{
   padding-left: 5px;
   padding-right: 5px;
   padding-top : 5px;
-  padding-bottom: 5px;
   text-transform: full-width;
 
   background-repeat: no-repeat;
@@ -11,6 +10,28 @@ body{
 
   animation: mymove 5s infinite;
 }
+
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: black;
+}
+li{
+  float: left;
+}
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color: #111;
+}
+
 h1{
 text-align: left;
   text-shadow: 5px green;
@@ -26,12 +47,18 @@ text-decoration-color: blue;
   background-color: 5px 5px blue;
 }
 #myDIV {
-  width: 300px;
-  height: 200px;
-  background: red;
-  animation: mymove 5s infinite;
-}
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  anima
+  animation-duration: infinite;
 
 @keyframes mymove {
-  50% {background-color: blue;}
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
 }
